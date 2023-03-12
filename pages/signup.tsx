@@ -9,6 +9,7 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import ComputerTwoToneIcon from "@mui/icons-material/ComputerTwoTone";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -23,7 +24,7 @@ function Copyright(props: any) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Web Quest
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -55,11 +56,11 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
+          <Avatar sx={{ m: 1, bgcolor: "primary.main" }}>
+            <ComputerTwoToneIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            会員登録
           </Typography>
           <Box
             component="form"
@@ -75,7 +76,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="姓"
                   autoFocus
                 />
               </Grid>
@@ -84,7 +85,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="lastName"
-                  label="Last Name"
+                  label="名"
                   name="lastName"
                   autoComplete="family-name"
                 />
@@ -94,7 +95,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="メールアドレス"
                   name="email"
                   autoComplete="email"
                 />
@@ -104,19 +105,19 @@ export default function SignUp() {
                   required
                   fullWidth
                   name="password"
-                  label="Password"
+                  label="パスワード"
                   type="password"
                   id="password"
                   autoComplete="new-password"
                 />
               </Grid>
               <Grid item xs={12}>
-                <FormControlLabel
+                {/* <FormControlLabel
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
+                  label=""
+                /> */}
               </Grid>
             </Grid>
             <Button
@@ -125,12 +126,12 @@ export default function SignUp() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              送信
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
+                <Link href="/signin" variant="body2">
+                  サインインはこちらから
                 </Link>
               </Grid>
             </Grid>
