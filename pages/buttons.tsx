@@ -5,11 +5,25 @@ export default function BasicButtons() {
   return (
     <Stack spacing={2} direction="row">
       <Button variant="text">テキスト</Button>
-      <Button variant="contained" size="large">
-        100名の人材を表示
+      <Button
+        variant="contained"
+        sx={{
+          background: "#00b4ed",
+          color: "black",
+          ":hover": { background: "#ffffff" },
+        }}
+        size="large"
+      >
       </Button>
-      <Button variant="contained" color="secondary" size="large">
-        100名の人材を表示
+      <Button
+        variant="contained"
+        sx={{
+          background: "#efea30",
+          color: "black",
+          ":hover": { background: "#ffffff" },
+        }}
+        size="large"
+      >
       </Button>
       <Button variant="outlined">Outlined</Button>
     </Stack>

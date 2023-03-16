@@ -31,7 +31,13 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    background: {
+      default: "#efea30",
+    },
+  },
+});
 
 export default function SignIn() {
   const handleSubmit = (event) => {
@@ -45,7 +51,7 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" sx={{ background:"#ffffff" }}>
         <CssBaseline />
         <Box
           sx={{
@@ -95,7 +101,7 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, background: "#00b4ed" }}
             >
               サインイン
             </Button>
